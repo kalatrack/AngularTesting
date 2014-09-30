@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+	<meta charset="UTF-8">
+	<title>Angular Js</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<h1>AngularJs Labrary Test Unit.</h1>
+
+
+
+<div ng-controller="myFirstTest">
+	<p>{{first_var}}</p>
+	<p>{{second_var}}</p>
+    </div>
+
+<div ng-controller="dates" id="clock">
+	<span id="date">Date & Time :</span> {{clock}}
+   </div>
+
+	<p ng-controller="hellos">{{hello_message}}</p>
+
+<div id="names">
+	<label for="name">Name: </label><input type="text" ng-model="names" id="name" >
+  </div>
+
+<div id="checkboxs">
+	<label for="checked">Status: </label><input type="checkbox" id="checked" ng-model="check">
+  </div>
+
+<div ng-hide="check">
+	Hello, <i>{{names || "world"}} !</i>
+  </div>
+
+
+<script type="text/javascript" src="js/angular.legacy.js"></script>
+<script type="text/javascript" src="js/myAngular.js"></script>
+
+<script type="text/javascript">
+
+</script>
+</body>
+</html>
