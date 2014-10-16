@@ -1,4 +1,41 @@
+// now it is angular ng-change directive //
 
+var firstController = angular.module('Apps',[]);
+firstController.controller('firstController', function($scope){
+		$scope.counter = 1;
+		$scope.ad = 1;
+	
+	$scope.adds = function(){
+		$scope.ad ++;
+		$scope.counter = $scope.ad;
+	}
+	$scope.str = function(){
+		$scope.ad --;
+		$scope.counter =$scope.ad;
+	}
+});
+
+
+
+//little search app
+var list = function($scope){
+	$scope.people = [
+		{name: "Tom", age: "40"},
+		{name: "Hussain", age: "50"},
+		{name: "Adil", age: "20"},
+		{name: "Asim", age: "30"},
+		{name: "Nokail", age: "15"}
+
+	];
+	$scope.add = function(){
+		var newItem = {name: $scope.nname, age: $scope.nage}
+		$scope.people.push(newItem);
+	};
+	
+	$scope.remove = function(index){
+		$scope.people.splice(index,1);
+	};
+};
 
 
 //This is for Time update live app

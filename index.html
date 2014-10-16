@@ -8,7 +8,16 @@
 <body>
 	<h1>AngularJs Labrary Test Unit.</h1>
 
-
+<p>A little Search App in Angular</p>
+<div>
+	<input type="search" ng-model="search">
+</div>
+<div ng-controller="list">
+	<ul>
+		<li ng-repeat="person in people | filter:search">{{person.name}} : {{person.age}}</li>
+	</ul>
+</div>
+<hr>
 
 <div ng-controller="myFirstTest">
 	<p>{{first_var}}</p>
